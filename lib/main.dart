@@ -50,12 +50,26 @@ class HRManagement extends StatelessWidget {
             .colorScheme
             .copyWith(secondary: AppColors.secondary),
         appBarTheme: const AppBarTheme(
+          elevation: 0,
           surfaceTintColor: Colors.transparent,
           scrolledUnderElevation: 0,
           systemOverlayStyle: SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,
             statusBarIconBrightness: Brightness.light,
             statusBarBrightness: Brightness.dark,
+          ),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: WidgetStateProperty.all(
+              AppColors.primary,
+            ),
+            foregroundColor: WidgetStateProperty.all(Colors.white,),
+            textStyle: WidgetStateProperty.all(
+              const TextStyle(
+                fontSize: 17,
+              ),
+            ),
           ),
         ),
       ),
