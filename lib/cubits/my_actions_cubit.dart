@@ -12,24 +12,27 @@ class MyActionsCubit extends Cubit<MyActionsState> {
 
   List<MyActionsUi> myActionsList = const [
     MyActionsUi(
+      id: 1,
       title: 'Attendance',
       bgColor: AppColors.greenColor,
       iconColor: AppColors.lightGreen,
       iconData: Icons.timer_outlined,
     ),
     MyActionsUi(
-      title: 'Leave Request',
-      bgColor: AppColors.lightOrange,
-      iconData: Icons.timelapse,
-      iconColor: Colors.orange
-    ),
+        id: 2,
+        title: 'Leave Request',
+        bgColor: AppColors.lightOrange,
+        iconData: Icons.timelapse,
+        iconColor: Colors.orange),
     MyActionsUi(
+      id: 3,
       title: 'Attach Sick Leave',
       bgColor: AppColors.lightPink,
       iconColor: AppColors.pinkColor,
       iconData: Icons.person_pin_circle_rounded,
     ),
     MyActionsUi(
+      id: 4,
       title: 'Vacation Request',
       bgColor: AppColors.lightPurple,
       iconData: Icons.calendar_month_outlined,

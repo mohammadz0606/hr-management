@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:hr_management/helper/colors.dart';
-import 'package:hr_management/helper/icons_image.dart';
 import 'package:hr_management/widgets/scroll_view.dart';
 
 import '../widgets/card.dart';
@@ -21,7 +20,7 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'Welcome Mohammad',
             style: TextStyle(
               fontSize: 22,
@@ -33,9 +32,9 @@ class HomeScreen extends StatelessWidget {
           const TitleWidget(
             text: 'Check In/Out',
           ),
-          CustomCard(
+          const CustomCard(
             child: Padding(
-              padding: const EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
               child: Row(
                 children: [
                   Expanded(

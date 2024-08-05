@@ -21,7 +21,7 @@ class CheckInOutTime extends StatelessWidget {
               children: [
                 const TextSpan(text: 'Check In: '),
                 TextSpan(
-                  text: DateTime.now().getTimeFromDate(),
+                  text: DateTime.now().getFullTimeFromDate(),
                   style: const TextStyle(
                     color: AppColors.primary,
                   ),
@@ -46,7 +46,7 @@ class CheckInOutTime extends StatelessWidget {
               children: [
                 TextSpan(text: 'Check Out: '),
                 TextSpan(
-                  text: DateTime.now().getTimeFromDate(),
+                  text: DateTime.now().getFullTimeFromDate(),
                   style: const TextStyle(
                     color: AppColors.primary,
                   ),

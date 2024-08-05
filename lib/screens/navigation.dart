@@ -28,7 +28,7 @@ class NavigationScreen extends StatelessWidget {
               Icons.notifications,
             ),
           ),
-          const SizedBox(width: 5),
+          const SizedBox(width: 7),
           CircleAvatar(
             backgroundColor: Theme.of(context).primaryColor,
             backgroundImage: const AssetImage(Images.personPlaceHolder),

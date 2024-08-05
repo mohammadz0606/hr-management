@@ -29,7 +29,7 @@ class RemainingBalanceList extends StatelessWidget {
           },
           child: CustomCard(
             child: Container(
-              width: MediaQuery.of(context).size.width * 0.5,
+              width: MediaQuery.of(context).size.width * 0.51,
               padding: const EdgeInsets.all(15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
