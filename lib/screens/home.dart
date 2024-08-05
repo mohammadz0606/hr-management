@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'package:hr_management/helper/colors.dart';
+import 'package:hr_management/helper/icons_image.dart';
 import 'package:hr_management/widgets/scroll_view.dart';
 
 import '../widgets/card.dart';
 import '../widgets/home/check_in.dart';
 import '../widgets/home/check_in_out_time.dart';
+import '../widgets/home/my_actions.dart';
 import '../widgets/home/remaining_balance_list.dart';
 import '../widgets/home/title_widget.dart';
 
@@ -39,6 +41,7 @@ class HomeScreen extends StatelessWidget {
                   Expanded(
                     child: CheckInOutTime(),
                   ),
+                  SizedBox(width: 10),
                   Expanded(
                     child: CheckIn(),
                   ),
@@ -57,6 +60,11 @@ class HomeScreen extends StatelessWidget {
           const SizedBox(height: 20),
           const TitleWidget(
             text: 'My Actions',
+          ),
+          const MyActions(),
+          const SizedBox(height: 20),
+          const TitleWidget(
+            text: 'My Attendance',
           ),
         ],
       ),

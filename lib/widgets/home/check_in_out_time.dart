@@ -32,7 +32,7 @@ class CheckInOutTime extends StatelessWidget {
         ),
         SizedBox(height: 5),
         Divider(
-          endIndent: 11,
+          endIndent: 10,
         ),
         SizedBox(height: 5),
         FittedBox(
