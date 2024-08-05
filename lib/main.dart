@@ -41,49 +41,55 @@ class HRManagement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (context) => NavigationCubit(),
-          ),
-        ],
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          initialRoute: SplashScreen.route,
-          routes: appRoutes,
-          theme: ThemeData.light().copyWith(
-            brightness: Brightness.light,
-            primaryColor: AppColors.primary,
-            scaffoldBackgroundColor: AppColors.scaffoldBackground,
-            colorScheme: ThemeData.light()
-                .colorScheme
-                .copyWith(secondary: AppColors.secondary),
-            appBarTheme: const AppBarTheme(
-              elevation: 0,
-              centerTitle: false,
-              surfaceTintColor: Colors.transparent,
-              scrolledUnderElevation: 0,
-              systemOverlayStyle: SystemUiOverlayStyle(
-                statusBarColor: Colors.transparent,
-                statusBarIconBrightness: Brightness.dark,
-                statusBarBrightness: Brightness.dark,
-              ),
-            ),
-            elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ButtonStyle(
-                backgroundColor: WidgetStateProperty.all(
-                  AppColors.primary,
-                ),
-                foregroundColor: WidgetStateProperty.all(
-                  Colors.white,
-                ),
-                textStyle: WidgetStateProperty.all(
-                  const TextStyle(
-                    fontSize: 17,
-                  ),
-                ),
-              ),
+      providers: [
+        BlocProvider(
+          create: (context) => NavigationCubit(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: SplashScreen.route,
+        routes: appRoutes,
+        theme: ThemeData.light().copyWith(
+          brightness: Brightness.light,
+          primaryColor: AppColors.primary,
+          scaffoldBackgroundColor: AppColors.scaffoldBackground,
+          colorScheme: ThemeData.light()
+              .colorScheme
+              .copyWith(secondary: AppColors.secondary),
+          appBarTheme: const AppBarTheme(
+            elevation: 0,
+            centerTitle: false,
+            surfaceTintColor: Colors.transparent,
+            scrolledUnderElevation: 0,
+            systemOverlayStyle: SystemUiOverlayStyle(
+              statusBarColor: Colors.transparent,
+              statusBarIconBrightness: Brightness.dark,
+              statusBarBrightness: Brightness.dark,
             ),
           ),
-        ));
+          dividerColor: AppColors.thirdColor,
+          dividerTheme: const DividerThemeData(
+            color: AppColors.thirdColor,
+            thickness: 1.2,
+          ),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ButtonStyle(
+              backgroundColor: WidgetStateProperty.all(
+                AppColors.primary,
+              ),
+              foregroundColor: WidgetStateProperty.all(
+                Colors.white,
+              ),
+              textStyle: WidgetStateProperty.all(
+                const TextStyle(
+                  fontSize: 17,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

@@ -36,13 +36,19 @@ class NavigationScreen extends StatelessWidget {
           const SizedBox(width: 10),
         ],
       ),
+      body: BlocBuilder<NavigationCubit,NavigationState>(
+        builder: (context, state) {
+          return BlocProvider.of<NavigationCubit>(context)
+              .screens[BlocProvider.of<NavigationCubit>(context).currentIndex];
+        },
+      ),
       bottomNavigationBar: BlocBuilder<NavigationCubit, NavigationState>(
         builder: (context, state) {
           return CustomButtonNavBar(
-            onTap: (value) {
-              BlocProvider.of<NavigationCubit>(context).onChangeItem(value);
-            },
-            currentIndex: BlocProvider.of<NavigationCubit>(context).currentIndex,
+            onTap: (value) =>
+                BlocProvider.of<NavigationCubit>(context).onChangeItem(value),
+            currentIndex:
+                BlocProvider.of<NavigationCubit>(context).currentIndex,
             items: BlocProvider.of<NavigationCubit>(context).items,
           );
         },

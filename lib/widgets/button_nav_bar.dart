@@ -21,6 +21,7 @@ class CustomButtonNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     if (Platform.isIOS) {
       return CupertinoTabBar(
+        backgroundColor: Colors.white,
         currentIndex: currentIndex,
         onTap: onTap,
         inactiveColor: AppColors.unSelected,
@@ -29,6 +30,8 @@ class CustomButtonNavBar extends StatelessWidget {
       );
     } else {
       return BottomNavigationBar(
+        backgroundColor: Colors.white,
+        useLegacyColorScheme: false,
         items: items,
         currentIndex: currentIndex,
         onTap: onTap,

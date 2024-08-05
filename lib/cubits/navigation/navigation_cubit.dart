@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
 import '../../helper/icons_image.dart';
+import '../../screens/home.dart';
 
 part 'navigation_state.dart';
 
@@ -15,19 +16,30 @@ class NavigationCubit extends Cubit<NavigationState> {
     const BottomNavigationBarItem(
       icon: ImageIcon(AssetImage(IconsImage.home)),
       label: '',
+      backgroundColor: Colors.white,
     ),
     const BottomNavigationBarItem(
       icon: ImageIcon(AssetImage(IconsImage.file)),
       label: '',
+      backgroundColor: Colors.white,
     ),
     const BottomNavigationBarItem(
       icon: ImageIcon(AssetImage(IconsImage.bar)),
       label: '',
+      backgroundColor: Colors.white,
     ),
     const BottomNavigationBarItem(
       icon: ImageIcon(AssetImage(IconsImage.person)),
       label: '',
+      backgroundColor: Colors.white,
     ),
+  ];
+
+  final List<Widget> screens = [
+    const HomeScreen(),
+    Container(),
+    Container(),
+    Container(),
   ];
 
 

@@ -6,11 +6,13 @@ import 'package:flutter/material.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
-    required this.text,
+    this.text,
+    this.child,
     required this.onPressed,
   });
 
-  final String text;
+  final String? text;
+  final Widget? child;
   final Function() onPressed;
 
   @override
@@ -19,12 +21,12 @@ class CustomButton extends StatelessWidget {
       return CupertinoButton(
         onPressed: onPressed,
         color: Theme.of(context).primaryColor,
-        child: Text(text),
+        child: child ?? Text(text ?? ''),
       );
     } else {
       return ElevatedButton(
         onPressed: onPressed,
-        child: Text(text),
+        child: child ?? Text(text ?? ''),
       );
     }
   }
