@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+
 import 'package:hr_management/helper/colors.dart';
 import 'package:hr_management/widgets/scroll_view.dart';
 
 import '../widgets/card.dart';
 import '../widgets/home/check_in.dart';
 import '../widgets/home/check_in_out_time.dart';
+import '../widgets/home/remaining_balance_list.dart';
 import '../widgets/home/title_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,7 +15,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomSingleChildScrollView(
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,8 +27,8 @@ class HomeScreen extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
           ),
-          SizedBox(height: 20),
-          TitleWidget(
+          const SizedBox(height: 20),
+          const TitleWidget(
             text: 'Check In/Out',
           ),
           CustomCard(
@@ -43,6 +45,18 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+          const SizedBox(height: 20),
+          const TitleWidget(
+            text: 'My Remaining Balance',
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.15,
+            child: const RemainingBalanceList(),
+          ),
+          const SizedBox(height: 20),
+          const TitleWidget(
+            text: 'My Actions',
           ),
         ],
       ),

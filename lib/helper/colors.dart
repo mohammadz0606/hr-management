@@ -7,5 +7,6 @@ sealed class AppColors{
   static const Color secondary = Color(0xff547280);
   static const Color thirdColor= Color(0xff3CB0E6);
   static const Color unSelected = Color(0xffC1CAC7);
+  static const Color dayTextColor = Color(0xff1D85B4);
   static const Color darkGray = Color(0xff42494C);
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hr_management/cubits/navigation/navigation_cubit.dart';
+import 'package:hr_management/cubits/remaining_balance/remaining_balance_cubit.dart';
 import 'package:hr_management/helper/routs.dart';
 
 import 'helper/colors.dart';
@@ -44,6 +45,9 @@ class HRManagement extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => NavigationCubit(),
+        ),
+        BlocProvider(
+          create: (context) => RemainingBalanceCubit(),
         ),
       ],
       child: MaterialApp(
