@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hr_management/screens/navigation.dart';
 
 import '../../helper/images.dart';
 import '../button.dart';
@@ -13,7 +14,7 @@ class AuthBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomSingleChildScrollView(
       padding: EdgeInsets.only(
-        left: 20,
+        left: 25,
         right: 25,
         top: MediaQuery.of(context).size.height * 0.17,
       ),
@@ -56,6 +57,7 @@ class AuthBody extends StatelessWidget {
               text: 'Login',
               onPressed: () {
                 FocusScope.of(context).unfocus();
+                Navigator.pushReplacementNamed(context, NavigationScreen.route);
               },
             ),
           ),

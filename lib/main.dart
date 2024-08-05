@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hr_management/cubits/navigation/navigation_cubit.dart';
 import 'package:hr_management/helper/routs.dart';
 
 import 'helper/colors.dart';
@@ -38,41 +40,50 @@ class HRManagement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: SplashScreen.route,
-      routes: appRoutes,
-      theme: ThemeData.light().copyWith(
-        brightness: Brightness.light,
-        primaryColor: AppColors.primary,
-        scaffoldBackgroundColor: AppColors.scaffoldBackground,
-        colorScheme: ThemeData.light()
-            .colorScheme
-            .copyWith(secondary: AppColors.secondary),
-        appBarTheme: const AppBarTheme(
-          elevation: 0,
-          surfaceTintColor: Colors.transparent,
-          scrolledUnderElevation: 0,
-          systemOverlayStyle: SystemUiOverlayStyle(
-            statusBarColor: Colors.transparent,
-            statusBarIconBrightness: Brightness.light,
-            statusBarBrightness: Brightness.dark,
+    return MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => NavigationCubit(),
           ),
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ButtonStyle(
-            backgroundColor: WidgetStateProperty.all(
-              AppColors.primary,
+        ],
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          initialRoute: SplashScreen.route,
+          routes: appRoutes,
+          theme: ThemeData.light().copyWith(
+            brightness: Brightness.light,
+            primaryColor: AppColors.primary,
+            scaffoldBackgroundColor: AppColors.scaffoldBackground,
+            colorScheme: ThemeData.light()
+                .colorScheme
+                .copyWith(secondary: AppColors.secondary),
+            appBarTheme: const AppBarTheme(
+              elevation: 0,
+              centerTitle: false,
+              surfaceTintColor: Colors.transparent,
+              scrolledUnderElevation: 0,
+              systemOverlayStyle: SystemUiOverlayStyle(
+                statusBarColor: Colors.transparent,
+                statusBarIconBrightness: Brightness.dark,
+                statusBarBrightness: Brightness.dark,
+              ),
             ),
-            foregroundColor: WidgetStateProperty.all(Colors.white,),
-            textStyle: WidgetStateProperty.all(
-              const TextStyle(
-                fontSize: 17,
+            elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all(
+                  AppColors.primary,
+                ),
+                foregroundColor: WidgetStateProperty.all(
+                  Colors.white,
+                ),
+                textStyle: WidgetStateProperty.all(
+                  const TextStyle(
+                    fontSize: 17,
+                  ),
+                ),
               ),
             ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
