@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
             text: 'My Remaining Balance',
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.161,
+            height: MediaQuery.of(context).size.height * 0.17,
             child: const RemainingBalanceList(),
           ),
           const SizedBox(height: 20),

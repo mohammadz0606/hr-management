@@ -24,7 +24,7 @@ class MyActions extends StatelessWidget {
               BlocProvider.of<MyActionsCubit>(context).myActionsList[index];
           return CustomCard(
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -41,14 +41,15 @@ class MyActions extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  FittedBox(
-                    child: Text(
-                      data.title,
-                      style: const TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
-                        color: AppColors.darkGray,
-                      ),
+                  Text(
+                    data.title,
+                    textAlign: TextAlign.center,
+                    overflow: TextOverflow.visible,
+                    maxLines: null,
+                    style: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.darkGray,
                     ),
                   ),
                 ],

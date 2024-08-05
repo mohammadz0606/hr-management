@@ -28,8 +28,9 @@ class RemainingBalanceList extends StatelessWidget {
             log(index.toString());
           },
           child: CustomCard(
-            child: Padding(
-              padding: const EdgeInsets.all(10),
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.5,
+              padding: const EdgeInsets.all(15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -37,7 +38,7 @@ class RemainingBalanceList extends StatelessWidget {
                     child: Text(
                       'Annual Vacation',
                       style: const TextStyle(
-                        fontSize: 18,
+                        fontSize: 20,
                         color: AppColors.secondary,
                         fontWeight: FontWeight.w500,
                       ),
