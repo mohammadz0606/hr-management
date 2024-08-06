@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:hr_management/helper/colors.dart';
-import 'package:hr_management/widgets/scroll_view.dart';
+import 'package:hr_management/custom_widgets/scroll_view.dart';
 
-import '../widgets/card.dart';
+import '../custom_widgets/card.dart';
+import '../widgets/get_title_name.dart';
 import '../widgets/home/check_in.dart';
 import '../widgets/home/check_in_out_time.dart';
 import '../widgets/home/my_actions.dart';
+import '../widgets/home/my_attendance_list.dart';
 import '../widgets/home/remaining_balance_list.dart';
-import '../widgets/home/title_widget.dart';
+import '../widgets/title_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,24 +21,17 @@ class HomeScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'Welcome Mohammad',
-            style: TextStyle(
-              fontSize: 22,
-              color: AppColors.darkGray,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
+          const GetTitleName(),
           const SizedBox(height: 20),
           const TitleWidget(
             text: 'Check In/Out',
           ),
-          const CustomCard(
+           const CustomCard(
             child: Padding(
               padding: EdgeInsets.all(10),
               child: Row(
                 children: [
-                  Expanded(
+                   Expanded(
                     child: CheckInOutTime(),
                   ),
                   SizedBox(width: 10),
@@ -65,6 +59,7 @@ class HomeScreen extends StatelessWidget {
           const TitleWidget(
             text: 'My Attendance',
           ),
+          const MyAttendanceList(),
         ],
       ),
     );

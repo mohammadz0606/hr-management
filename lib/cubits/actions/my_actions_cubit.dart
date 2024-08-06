@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hr_management/helper/colors.dart';
 import 'package:meta/meta.dart';
 
-import '../data/models/my_actions_ui.dart';
+import '../../data/models/my_actions_ui.dart';
 
 part 'my_actions_state.dart';
 

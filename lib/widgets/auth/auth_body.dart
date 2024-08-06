@@ -3,9 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hr_management/screens/navigation.dart';
 
 import '../../helper/images.dart';
-import '../button.dart';
-import '../custom_text_field.dart';
-import '../scroll_view.dart';
+import '../../custom_widgets/button.dart';
+import '../../custom_widgets/custom_text_field.dart';
+import '../../custom_widgets/scroll_view.dart';
 
 class AuthBody extends StatelessWidget {
   const AuthBody({super.key});

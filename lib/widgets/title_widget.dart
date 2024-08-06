@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../helper/colors.dart';
+import '../helper/colors.dart';
 
 class TitleWidget extends StatelessWidget {
   const TitleWidget({

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../cubits/my_actions_cubit.dart';
+import '../../cubits/actions/my_actions_cubit.dart';
 import '../../helper/colors.dart';
-import '../card.dart';
+import '../../screens/leave_request.dart';
+import '../../screens/my_attendance.dart';
+import '../../custom_widgets/card.dart';
 
 class MyActions extends StatelessWidget {
   const MyActions({super.key});
@@ -27,8 +29,10 @@ class MyActions extends StatelessWidget {
               onTap: () {
                 switch (data.id) {
                   case 1:
+                    Navigator.pushNamed(context, MyAttendanceScreen.route);
                     break;
                   case 2:
+                    Navigator.pushNamed(context, LeaveRequestScreen.route);
                     break;
                   case 3:
                     break;

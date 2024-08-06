@@ -6,7 +6,7 @@ import 'package:hr_management/helper/extensions.dart';
 
 import '../../cubits/remaining_balance/remaining_balance_cubit.dart';
 import '../../helper/colors.dart';
-import '../card.dart';
+import '../../custom_widgets/card.dart';
 
 
 class RemainingBalanceList extends StatelessWidget {
@@ -34,28 +34,28 @@ class RemainingBalanceList extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  FittedBox(
+                  const FittedBox(
                     child: Text(
                       'Annual Vacation',
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 20,
                         color: AppColors.secondary,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
-                  SizedBox(height: 5),
+                  const SizedBox(height: 5),
                   Text.rich(
                     TextSpan(
                       children: [
-                        TextSpan(
+                        const TextSpan(
                           text: '30',
                           style: TextStyle(
                             fontSize: 20,
                             color: AppColors.dayTextColor,
                           ),
                         ),
-                        TextSpan(
+                        const TextSpan(
                           text: ' / ',
                           style: TextStyle(
                             fontSize: 20,
@@ -72,10 +72,10 @@ class RemainingBalanceList extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 5),
-                  Text(
+                  const SizedBox(height: 5),
+                  const Text(
                     'Days',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 18,
                       color: AppColors.secondary,
                       fontWeight: FontWeight.w500,

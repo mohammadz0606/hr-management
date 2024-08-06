@@ -13,7 +13,10 @@ extension DateFormated on DateTime {
     return DateFormat('hh:mm').format(this);
   }
 
-  String formatDate() {
+  String formatFullDate() {
     return DateFormat('d MMMM y').format(this);
+  }
+  String formatDate() {
+    return DateFormat('d MMMM').format(this);
   }
 }
