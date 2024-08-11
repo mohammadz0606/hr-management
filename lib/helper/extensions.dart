@@ -5,6 +5,7 @@ extension DateFormated on DateTime {
     return DateTime(year, month + 1, 0).day.toString();
   }
 
+
   String getFullTimeFromDate() {
     return DateFormat('hh:mm a').format(this);
   }
